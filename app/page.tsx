@@ -18,90 +18,121 @@ import X from "lucide-react/dist/esm/icons/x.mjs";
 
 const navLinks = [
   ["Showroom", "#showroom"],
-  ["Collections", "#collections"],
-  ["Home Cinema", "#cinema"],
+  ["Products", "#products"],
+  ["Palm Springs", "#opening"],
+  ["Cinema", "#cinema"],
   ["Smart Living", "#smart-living"],
   ["Installation", "#installation"],
   ["Contact", "#contact"],
 ];
 
-const categoryCards = [
+const productShowcase = [
   {
-    title: "Signature TVs",
-    copy: "OLED, MicroLED, and 8K displays selected for performance, design, and architectural fit.",
+    title: "Samsung The Wall",
+    type: "MicroLED Display",
+    copy: "Statement-scale MicroLED walls for private cinemas, galleries, villas, and executive spaces.",
     image:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1600&q=90",
     icon: Monitor,
+    span: "lg:col-span-2 lg:row-span-2",
   },
   {
-    title: "Private Cinema Rooms",
-    copy: "Immersive cinema environments designed for movies, sports, gaming, and private entertainment.",
+    title: "OLED & 8K TVs",
+    type: "Premium Displays",
+    copy: "Ultra-thin OLED and 8K televisions selected for cinematic clarity and interior fit.",
     image:
-      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=90",
     icon: Eye,
+    span: "",
   },
   {
-    title: "Premium Audio",
-    copy: "High-fidelity speakers, soundbars, and acoustic systems tuned for your space.",
+    title: "Mac Studio Workstations",
+    type: "Creative Systems",
+    copy: "High-performance desks, displays, and Mac Studio setups for offices and creative rooms.",
     image:
-      "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=90",
+    icon: CircuitBoard,
+    span: "",
+  },
+  {
+    title: "Yamaha Reference Speakers",
+    type: "Premium Audio",
+    copy: "Floor-standing speakers, monitors, receivers, and room-tuned listening systems.",
+    image:
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1400&q=90",
     icon: AudioLines,
+    span: "lg:col-span-2",
+  },
+  {
+    title: "Grand Pianos & Performance Rooms",
+    type: "Acoustic Luxury",
+    copy: "Elegant piano rooms supported with discreet lighting, acoustic planning, and control.",
+    image:
+      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1400&q=90",
+    icon: Sparkles,
+    span: "lg:row-span-2",
   },
   {
     title: "Smart Home Control",
-    copy: "Lighting, climate, security, and entertainment connected through elegant control systems.",
+    type: "Automation",
+    copy: "Lighting, climate, security, shades, audio, and media through quiet control systems.",
     image:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=90",
     icon: CircuitBoard,
+    span: "",
   },
   {
     title: "Architectural Displays",
-    copy: "Wall-mounted, hidden, and statement displays that blend into luxury interiors.",
+    type: "Integrated Design",
+    copy: "Wall-mounted, hidden, and statement displays designed around the room architecture.",
     image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=90",
     icon: Building2,
+    span: "",
   },
   {
     title: "Custom Installation",
-    copy: "Clean mounting, hidden wiring, calibration, and after-sales support by specialists.",
+    type: "White Glove Setup",
+    copy: "Clean mounting, hidden wiring, calibration, handoff, and after-sales support.",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90",
     icon: House,
+    span: "lg:col-span-2",
   },
 ];
 
 const collections = [
   {
-    name: "The Cinema Wall",
-    type: "MicroLED Display System",
+    name: "The Display Studio",
+    type: "Samsung, OLED, 8K & MicroLED",
     tagline:
-      "A modular MicroLED experience for statement rooms and private theaters.",
+      "Premium screens arranged for real comparison, from elegant OLED televisions to statement display walls.",
     image:
       "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85",
   },
   {
-    name: "OLED Signature",
-    type: "Premium OLED Collection",
+    name: "Creative Desk Systems",
+    type: "Mac Studio & Work Displays",
     tagline:
-      "Ultra-thin cinematic displays with deep contrast and gallery-level design.",
+      "High-performance workstations for private offices, media suites, and design-led home studios.",
     image:
-      "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85",
   },
   {
-    name: "Reference Audio",
-    type: "Premium Audio System",
+    name: "Reference Audio Rooms",
+    type: "Yamaha Speakers & Components",
     tagline:
-      "High-fidelity sound systems built for immersive listening and cinematic depth.",
+      "Speakers, receivers, soundbars, and acoustic planning for rooms where sound matters.",
     image:
-      "https://images.unsplash.com/photo-1558089687-f282ffcbc126?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=85",
   },
   {
-    name: "Invisible Smart Living",
-    type: "Smart Home Integration",
+    name: "Performance Living",
+    type: "Pianos, Lighting & Smart Control",
     tagline:
-      "Lighting, climate, security, and entertainment control designed to disappear into your lifestyle.",
+      "Grand pianos, lighting scenes, media control, and room technology designed as one environment.",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1200&q=85",
   },
 ];
 
@@ -183,12 +214,12 @@ const reveal: Variants = {
 
 function Logo() {
   return (
-    <span className="flex items-center gap-3">
-      <span className="relative grid h-9 w-9 place-items-center overflow-hidden border border-black/20 bg-white/5">
-        <span className="absolute h-px w-12 rotate-45 bg-warm shadow-[0_0_18px_rgba(17,19,21,0.18)]" />
-        <span className="h-4 w-4 border border-platinum/70" />
+    <span className="flex items-center gap-3 rounded-2xl border border-black/10 bg-white px-4 py-2 shadow-[0_14px_32px_rgba(17,19,21,0.10)]">
+      <span className="relative grid h-9 w-9 place-items-center rounded-xl bg-warm text-white">
+        <span className="font-display text-sm font-semibold tracking-normal">A</span>
+        <span className="absolute bottom-2 h-px w-4 bg-white" />
       </span>
-      <span className="font-display text-xl font-semibold tracking-[0.32em] text-warm">
+      <span className="font-display text-lg font-semibold tracking-[0.34em] text-warm">
         AVIR
       </span>
     </span>
@@ -215,7 +246,7 @@ function ButtonLink({
   return (
     <a
       href={href}
-      className={`group inline-flex min-h-12 items-center justify-center gap-3 border px-6 text-sm font-semibold transition duration-300 ${
+      className={`group inline-flex min-h-12 items-center justify-center gap-3 rounded-2xl border px-6 text-sm font-semibold transition duration-300 ${
         variant === "primary"
           ? "border-black bg-warm text-white shadow-[0_18px_44px_rgba(17,19,21,0.12)] hover:bg-black"
           : "border-black/10 bg-white/90 text-warm backdrop-blur hover:border-black hover:bg-white"
@@ -247,17 +278,20 @@ export default function Home() {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
+        <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#top" aria-label="AVIR home">
             <Logo />
           </a>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav
+            className="hidden items-center gap-1 rounded-2xl border border-black/10 bg-white px-2 py-2 shadow-[0_14px_32px_rgba(17,19,21,0.08)] lg:flex"
+            aria-label="Primary"
+          >
             {navLinks.map(([label, href]) => (
               <a
                 key={label}
                 href={href}
-                className="text-sm text-platinum/75 transition hover:text-warm"
+                className="rounded-xl px-4 py-2 text-sm text-platinum/75 transition hover:bg-ink hover:text-warm"
               >
                 {label}
               </a>
@@ -265,13 +299,13 @@ export default function Home() {
           </nav>
 
           <div className="hidden lg:block">
-            <ButtonLink href="#contact" variant="secondary">
-              Book Private Demo
+            <ButtonLink href="#contact">
+              Book a visit
             </ButtonLink>
           </div>
 
           <button
-            className="grid h-11 w-11 place-items-center border border-black/10 bg-white/90 text-warm lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/90 text-warm shadow-[0_14px_32px_rgba(17,19,21,0.08)] lg:hidden"
             onClick={() => setMenuOpen((value) => !value)}
             aria-label="Toggle menu"
           >
@@ -296,7 +330,7 @@ export default function Home() {
                   {label}
                 </a>
               ))}
-              <ButtonLink href="#contact">Book Private Demo</ButtonLink>
+              <ButtonLink href="#contact">Book a visit</ButtonLink>
             </div>
           </motion.div>
         )}
@@ -305,8 +339,8 @@ export default function Home() {
       <section id="top" className="relative flex min-h-screen items-end pt-24">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2200&q=90"
-            alt="Luxury living room with cinematic display wall"
+            src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=2200&q=90"
+            alt="Premium studio with high-end electronics and speakers"
             className="h-full w-full object-cover"
           />
         </div>
@@ -317,16 +351,8 @@ export default function Home() {
           animate="show"
           className="relative mx-auto w-full max-w-7xl px-5 pb-12 sm:px-8 lg:pb-16"
         >
-          <div className="max-w-xl">
-            <p className="bg-white/85 px-5 py-4 text-sm font-medium uppercase tracking-[0.24em] text-warm backdrop-blur">
-              Designed for extraordinary living.
-            </p>
-            <div className="mt-6 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="#contact">Book a Private Demo</ButtonLink>
-              <ButtonLink href="#collections" variant="secondary">
-                Explore Collections
-              </ButtonLink>
-            </div>
+          <div className="flex max-w-xl flex-col items-start">
+            <ButtonLink href="#contact">Book a visit</ButtonLink>
           </div>
         </motion.div>
       </section>
@@ -341,7 +367,7 @@ export default function Home() {
       >
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <SectionLabel>Designed for extraordinary living.</SectionLabel>
+            <SectionLabel>Private technology studio.</SectionLabel>
             <h2 className="max-w-4xl font-display text-4xl font-semibold leading-tight text-warm sm:text-6xl">
               A curated technology showroom for refined spaces.
             </h2>
@@ -368,23 +394,24 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <section className="px-5 pb-24 sm:px-8 lg:pb-32">
+      <section id="products" className="px-5 pb-24 sm:px-8 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
-              <SectionLabel>Luxury technology for modern spaces.</SectionLabel>
-              <h2 className="font-display text-4xl font-semibold sm:text-6xl">
-                Featured categories
+              <SectionLabel>High-ticket showroom pieces.</SectionLabel>
+              <h2 className="max-w-4xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
+                Big products, proper demonstrations, and rooms built around the technology.
               </h2>
             </div>
             <p className="max-w-xl text-platinum/70">
-              A showroom-first selection of display, audio, automation, and
-              installation services for luxury residential and commercial spaces.
+              See premium televisions, MicroLED walls, Mac Studio workstations,
+              Yamaha audio, grand pianos, smart controls, and installation
+              details in a calm showroom setting.
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {categoryCards.map((card) => {
+          <div className="grid auto-rows-[320px] gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {productShowcase.map((card) => {
               const Icon = card.icon;
               return (
                 <motion.article
@@ -394,20 +421,23 @@ export default function Home() {
                   whileInView="show"
                   viewport={{ once: true, margin: "-80px" }}
                   whileHover={{ y: -8 }}
-                  className="group overflow-hidden border border-black/10 bg-white/90"
+                  className={`group flex min-h-[320px] flex-col overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-[0_18px_44px_rgba(17,19,21,0.08)] ${card.span}`}
                 >
-                  <div className="relative aspect-[1.35] overflow-hidden">
+                  <div className="relative min-h-0 flex-1 overflow-hidden">
                     <img
                       src={card.image}
                       alt={card.title}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute left-5 top-5 grid h-11 w-11 place-items-center border border-black/10 bg-white/70 backdrop-blur">
+                    <div className="absolute left-5 top-5 grid h-11 w-11 place-items-center rounded-2xl border border-black/10 bg-white/85 shadow-sm backdrop-blur">
                       <Icon className="h-5 w-5 text-warm" />
                     </div>
                   </div>
-                  <div className="p-7">
-                    <h3 className="font-display text-2xl text-warm">
+                  <div className="p-6">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-platinum">
+                      {card.type}
+                    </p>
+                    <h3 className="font-display text-3xl leading-tight text-warm">
                       {card.title}
                     </h3>
                     <p className="mt-4 leading-7 text-platinum/70">{card.copy}</p>
@@ -416,6 +446,35 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section id="opening" className="px-5 pb-24 sm:px-8 lg:pb-32">
+        <div className="mx-auto grid max-w-7xl overflow-hidden rounded-[34px] border border-black/10 bg-white shadow-[0_24px_70px_rgba(17,19,21,0.08)] lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="p-8 sm:p-12 lg:p-16">
+            <SectionLabel>New showroom opening.</SectionLabel>
+            <h2 className="font-display text-4xl font-semibold leading-tight sm:text-6xl">
+              AVIR is opening a private technology showroom in Palm Springs, California.
+            </h2>
+            <p className="mt-7 text-lg leading-8 text-platinum/75">
+              The showroom will be designed for homeowners, designers, architects,
+              and project teams who want to compare high-end electronics in person
+              before planning a villa, office, creative studio, or private cinema.
+            </p>
+            <div className="mt-10 grid gap-4 text-sm font-semibold uppercase tracking-[0.2em] text-warm sm:grid-cols-2">
+              <span className="rounded-2xl border border-black/10 bg-ink px-5 py-4">
+                Private demos
+              </span>
+              <span className="rounded-2xl border border-black/10 bg-ink px-5 py-4">
+                By appointment
+              </span>
+            </div>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1500&q=90"
+            alt="Modern luxury showroom interior"
+            className="h-full min-h-[420px] w-full object-cover"
+          />
         </div>
       </section>
 
@@ -472,7 +531,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-10">
-              <ButtonLink href="#contact">Plan My Showroom Visit</ButtonLink>
+              <ButtonLink href="#contact">Plan my visit</ButtonLink>
             </div>
           </motion.div>
         </div>
@@ -480,10 +539,10 @@ export default function Home() {
 
       <section id="collections" className="px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-7xl">
-          <SectionLabel>A curated showroom for high-end electronics.</SectionLabel>
+          <SectionLabel>Curated systems.</SectionLabel>
           <h2 className="max-w-4xl font-display text-4xl font-semibold leading-tight sm:text-6xl">
-            Signature collections shaped around architecture, performance, and
-            private consultation.
+            Complete setups for homes, offices, studios, private cinemas, and
+            performance rooms.
           </h2>
           <div className="mt-14 grid gap-5 lg:grid-cols-4">
             {collections.map((item) => (
@@ -493,7 +552,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="group flex min-h-[520px] flex-col justify-between overflow-hidden border border-black/10 bg-white/90"
+                className="group flex min-h-[520px] flex-col justify-between overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-[0_18px_44px_rgba(17,19,21,0.08)]"
               >
                 <div className="relative h-56 overflow-hidden">
                   <img
@@ -572,7 +631,7 @@ export default function Home() {
               installation, smart-home integration, and ongoing support.
             </p>
             <div className="mt-10">
-              <ButtonLink href="#contact">Request Installation Consultation</ButtonLink>
+              <ButtonLink href="#contact">Request installation consultation</ButtonLink>
             </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -595,7 +654,7 @@ export default function Home() {
             "500+ Luxury Installations",
             "15+ Premium Brand Partners",
             "4K / 8K / MicroLED Expertise",
-            "Private Demo Appointments",
+            "Private showroom visits",
           ].map((stat) => (
             <div key={stat} className="border-l border-black pl-5">
               <p className="font-display text-2xl text-warm">{stat}</p>
@@ -646,9 +705,9 @@ export default function Home() {
               complete entertainment experience around your space.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <ButtonLink href="#contact">Book Private Demo</ButtonLink>
+              <ButtonLink href="#contact">Book a visit</ButtonLink>
               <ButtonLink href="#contact" variant="secondary">
-                Request Custom Quote
+                Request a custom quote
               </ButtonLink>
             </div>
           </div>
@@ -668,10 +727,10 @@ export default function Home() {
               concept to installation.
             </p>
             <div className="mt-10 grid gap-4 text-platinum/75">
-              <p>Showroom: AVIR Luxury Technology Showroom, Lahore, Pakistan</p>
-              <p>Phone: +92 XXX XXXXXXX</p>
-              <p>WhatsApp: +92 XXX XXXXXXX</p>
-              <p>Hours: Mon-Sat, 11:00 AM - 8:00 PM</p>
+              <p>Showroom: AVIR Technology Showroom, Palm Springs, California</p>
+              <p>Phone: Coming soon</p>
+              <p>Private visits: By appointment</p>
+              <p>Hours: Opening schedule to be announced</p>
             </div>
           </div>
 
@@ -688,12 +747,14 @@ export default function Home() {
             <label className="grid gap-2 text-sm text-platinum/70 sm:col-span-2">
               Interested In
               <select className="h-12 border border-black/10 bg-white/90 px-4 text-warm outline-none transition focus:border-black/70">
-                <option>Luxury TV</option>
+                <option>Samsung TVs and MicroLED</option>
+                <option>Mac Studio workstation</option>
+                <option>Yamaha speakers and audio</option>
+                <option>Grand piano and performance room</option>
                 <option>Private Cinema Room</option>
-                <option>Premium Audio</option>
                 <option>Smart Home Automation</option>
                 <option>Custom Installation</option>
-                <option>Complete Showroom Consultation</option>
+                <option>Complete showroom visit</option>
               </select>
             </label>
             <label className="grid gap-2 text-sm text-platinum/70 sm:col-span-2">
@@ -731,7 +792,7 @@ export default function Home() {
         </div>
         <div className="mx-auto mt-12 flex max-w-7xl flex-col justify-between gap-5 border-t border-black/10 pt-7 text-sm text-platinum/50 sm:flex-row">
           <p>© 2026 AVIR. All rights reserved.</p>
-          <p>Designed for extraordinary living.</p>
+          <p>Palm Springs showroom opening soon.</p>
         </div>
       </footer>
     </main>
