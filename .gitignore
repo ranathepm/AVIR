@@ -1,0 +1,8 @@
+.next/
+out/
+node_modules/
+.vercel/
+*.log
+*.zip
+tsconfig.tsbuildinfo
+.DS_Store
