@@ -6,3 +6,4 @@ node_modules/
 *.zip
 tsconfig.tsbuildinfo
 .DS_Store
+config.bat

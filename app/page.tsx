@@ -357,8 +357,8 @@ export default function Home() {
       <section id="top" className="relative flex min-h-screen items-end pt-24">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1766650186716-0120cbed1567?auto=format&fit=crop&w=2200&q=90"
-            alt="Electronics showroom with displays, audio equipment, and smart technology"
+            src="https://s47295.pcdn.co/wp-content/uploads/2021/05/Phil-Trubey-The-Wall.jpg"
+            alt="Samsung The Wall luxury home theater with premium electronics"
             className="h-full w-full object-cover"
           />
         </div>
