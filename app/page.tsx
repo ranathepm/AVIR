@@ -339,8 +339,8 @@ export default function Home() {
       <section id="top" className="relative flex min-h-screen items-end pt-24">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=2200&q=90"
-            alt="Premium studio with high-end electronics and speakers"
+            src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2200&q=90"
+            alt="Clean white showroom with premium display wall"
             className="h-full w-full object-cover"
           />
         </div>
